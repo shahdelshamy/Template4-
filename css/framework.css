@@ -1,0 +1,288 @@
+:root {
+    --blue-color: #0075ff;
+    --orange-color: #f59e0b;
+    --green-color: #22c55e;
+    --red-color: #f44336;
+    --grey-color: #888;
+    --main-color: #eee;
+    --d-color: #ddd;
+}
+
+
+/* Start box */
+.d-block{
+    display: block;
+}
+
+.d-flex {
+    display: flex;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.align-center {
+    align-items: center;
+}
+
+
+.d-grid {
+    display: grid;
+}
+
+.gap-20 {
+    gap: 20px;
+}
+
+@media(max-width:767px) {
+    .block-mobile {
+        display: block;
+    }
+    .hide-mobile{
+        display: none;
+    }
+}
+
+/* End box */
+
+/* Start sizes */
+.f-wd {
+    width: 100%;
+}
+.w-fit{
+    width: fit-content;
+}
+
+
+/* End sizes */
+
+/* Start position */
+.p-relative {
+    position: relative;
+}
+
+/* End position */
+
+/* Start Padding and margin */
+.p-5 {
+    padding: 5px;
+}
+.p-10 {
+    padding: 10px;
+}
+.pl-10 {
+    padding-left: 10px;
+}
+.pr-0 {
+    padding-right: 0;
+}
+.p-20 {
+    padding: 20px;
+}
+.mb-0 {
+    margin-bottom: 0;
+}
+.mb-5 {
+    margin-bottom: 5px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+.mb-15 {
+    margin-bottom: 15px;
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+.m-10 {
+    margin: 10px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+
+.ml-10 {
+    margin-left: 10px;
+}
+.mt-5 {
+    margin-top: 5px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.mt-15 {
+    margin-top: 15px;
+}
+.mt-20 {
+    margin-top: 20px;
+}
+.mt-30 {
+    margin-top: 30px;
+}
+.mt-40 {
+    margin-top: 40px;
+}
+.mt--10 {
+    margin-top: -20px;
+}
+.mt-50 {
+    margin-top: 50px;
+}
+.mr-10 {
+    margin-right: 10px;
+}
+.mr-20 {
+    margin-right: 20px;
+}
+.m-20 {
+    margin: 20px;
+}
+.mr-20 {
+    margin-right: 20px;
+}
+.mr-10 {
+    margin-right: 10px;
+}
+.ml-20 {
+    margin-left: 20px;
+}
+.ml-60 {
+    margin-left: 60px;
+}
+.mt-0 {
+    margin-top: 0;
+}
+
+
+.w-fit{
+    width: fit-content;
+}
+.h-fit{
+    height: fit-content;
+}
+.full-wight{
+    width: 100%;
+}
+.full-height{
+    height: 100%;
+}
+
+/* End Padding and margin */
+
+/* Start color */
+.bg-eee {
+    background-color: #eee;
+}
+
+.bg-white {
+    background-color: white;
+}
+.bg-blue {
+    background-color: var(--blue-color);
+}
+.bg-orange {
+    background-color: var(--orange-color);
+}
+.bg-green {
+    background-color: var(--green-color);
+}
+.bg-red {
+    background-color: var(--red-color);
+}
+
+.c-black {
+    color: black;
+}
+.c-white {
+    color: white;
+}
+.c-grey {
+    color: var(--grey-color);
+}
+.c-blue {
+    color: var(--blue-color);
+}
+.c-orange {
+    color: var(--orange-color);
+}
+.c-green {
+    color: var(--green-color);
+}
+.c-red {
+    color: var(--red-color);
+}
+/* End color */
+
+/* Start border */
+.red-6 {
+    border-radius: 6px;
+}
+.red-10 {
+    border-radius: 10px;
+}
+
+
+/* End border */
+
+/*Start Fonts */
+.txt-center {
+    text-align: center;
+}
+.fs-14{
+    font-size: 14px;
+}
+.fs-13{
+    font-size: 13px;
+}
+.fs-15{
+    font-size: 15px;
+}
+.fs-17{
+    font-size: 17px;
+}
+.fs-21{
+    font-size: 21px;
+}
+.fs-23{
+    font-size: 23px;
+}
+.fs-25{
+    font-size: 25px;
+}
+.fs-30{
+    font-size: 30px;
+}
+.f-bold{
+    font-weight: bold;
+}
+
+@media(max-width:767px) {
+    .txt-center-mobile {
+        text-align: center;
+    }
+}
+
+/*End Fonts */
+
+/* Start componant */
+.center-flex{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-shape{
+    border-radius: 20px;
+    padding: 10px;
+    color: white;
+    background-color: var(--blue-color);
+}
+/* End componant */
+
