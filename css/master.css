@@ -19,6 +19,8 @@
 body {
     background-color: #f1f5f9;
     font-family: "Open Sans", sans-serif;
+     margin: 0;
+    padding:0;
 }
 
 .page {
@@ -53,7 +55,7 @@ ul {
     background-color: var(--blue-alt-color);
 }
 
-.contant{
+.contant {
     overflow: hidden;
 }
 
@@ -202,7 +204,7 @@ ul {
 
 /* Start Content */
 .page h1 {
-    margin: 20px 0 30px 20px;
+    margin: 20px 20px 30px 20px;
 }
 
 .page h1::before,
@@ -225,9 +227,7 @@ ul {
     background-color: black;
 }
 
-.page .wrapper {
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
-}
+
 
 @media (max-width:767px) {
     .page .wrapper {
@@ -282,6 +282,10 @@ ul {
 }
 
 @media(max-width:767px) {
+
+    .welcome {
+        margin: 0;
+    }
 
     .welcome .intro img {
         display: none;
@@ -694,95 +698,112 @@ ul {
 /* End Last Post widget  */
 
 /* Start Social Media wedget  */
-.social .twiter{
+.social .twiter {
     background-color: rgb(29 161 242 / 30%);
 }
+
 .social .twiter span {
     color: #1da1f2;
 }
-.social .twiter a ,
-.social .twiter i{
+
+.social .twiter a,
+.social .twiter i {
     background-color: #1da1f2;
 }
 
- .social .facebook {
+.social .facebook {
     background-color: rgb(0 120 215 / 20%);
 }
+
 .social .facebook span {
     color: #0078d7;
 }
-.social .facebook a ,
-.social .facebook i{
+
+.social .facebook a,
+.social .facebook i {
     background-color: #0078d7;
 }
 
 .social .youtub {
     background-color: rgb(255 0 0 / 20%);
 }
+
 .social .youtub span {
     color: #ff0000;
 }
-.social .youtub a ,
-.social .youtub i{
+
+.social .youtub a,
+.social .youtub i {
     background-color: #ff0000;
 }
 
 .social .linkedin {
     background-color: rgb(10 102 194 / 20%);
 }
+
 .social .linkedin span {
     color: #0a66c2;
 }
-.social .linkedin a ,
-.social .linkedin i{
+
+.social .linkedin a,
+.social .linkedin i {
     background-color: #0a66c2;
 }
 
 .social .row i {
- width: 60px;
-height: 60px;
-transition: .3s;
+    width: 60px;
+    height: 60px;
+    transition: .3s;
 }
-.social .row i:hover{
+
+.social .row i:hover {
     transform: rotate(10deg);
 }
-.social .row span{
+
+.social .row span {
     flex-grow: 1;
 }
 
 /* End Social Media wedget  */
 
 /* Stat Table */
-.table .table-responsive{
+.table .table-responsive {
     overflow-x: auto;
 }
-.table table{
+
+.table table {
     min-width: 1000px;
     border-spacing: 0;
 }
-.table table tr td{
+
+.table table tr td {
     border-right: 2px solid #eee;
     border-bottom: 2px solid #eee;
 
 }
-.table table tr td:first-child{
+
+.table table tr td:first-child {
     border-left: 2px solid #eee;
-} 
-.table  table img{
+}
+
+.table table img {
     width: 32px;
     height: 32px;
     border-radius: 50%;
     padding: 2px;
     background-color: white;
 }
-.table  table img:not(:first-child){
+
+.table table img:not(:first-child) {
     margin-left: -13px;
 }
-.table tbody tr:hover td{
-    background-color: #f3e4e4;;
+
+.table tbody tr:hover td {
+    background-color: #f3e4e4;
+    ;
 }
 
-/* Stat Table */
+/* End Table */
 
 /* Start animation */
 @keyframes change-color {
@@ -798,3 +819,739 @@ transition: .3s;
 /* End animation */
 
 /* End Content */
+
+
+/* Start settings box */
+.settings-page {
+    grid-template-columns: repeat(auto-fill, minmax(490px, 1fr));
+}
+
+.settings-page .switch {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.settings-page .checkbox-toggle {
+    appearance: none;
+}
+
+.settings-page .switch-toggle {
+    width: 90px;
+    height: 40px;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    background-color: #dddddd82;
+
+}
+
+.settings-page .switch-toggle::before {
+    content: '\2715';
+    font-size: 18px;
+    color: #726969;
+    position: absolute;
+    top: 28px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+ 
+}
+
+.settings-page .checkbox-toggle:checked+.switch-toggle {
+    background-color: var(--blue-alt-color);
+}
+
+.settings-page .checkbox-toggle:checked+.switch-toggle::before {
+    content: '\2713';
+    left: 55px;
+    color: var(--blue-alt-color);
+}
+
+.settings-page .close-message {
+    resize: none;
+    border: 1px solid #d5cdcd;
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    outline: none;
+
+}
+
+@media (max-width:767px){
+    .settings-page .paragraph{
+        position: relative;
+        /* padding-bottom: 10px; */
+    }
+    .settings-page .switch {
+       position: absolute;
+       bottom: 0px;
+    }
+    .settings-page .close-message{
+        margin-top: 10px;
+    }
+}
+
+/* End settings box */
+
+/* Start settings box */
+.settings-page .information input[type="email"] {
+    cursor: no-drop;  
+}
+@media (max-width:767px){
+    .settings-page .email{
+        width: 75%;
+    }
+}
+
+
+/* End settings box */
+
+/* Start settings box */
+.settings-page .security:first-of-type a {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+}
+
+.settings-page .security:first-of-type a:hover {
+    background-color: var(--blue-color);
+}
+
+.settings-page .security div:nth-of-type(3) a {
+    background-color: #eee;
+    color: black;
+    font-weight: 900;
+}
+
+/* End settings box */
+
+/* Start settings box */
+
+.settings-page .social div i {
+    font-size: 25px;
+}
+
+.settings-page .social div:focus-within i{
+    color: black;
+}
+
+.settings-page .social div,
+.settings-page .social div input{
+    background-color: #f6f6f6;
+}
+
+/* End settings box */
+
+/* Start settings box */
+
+.settings-page .control input,
+.settings-page .radio input,
+.settings-page .server input{
+    appearance: none;
+}
+
+
+.settings-page .control label{
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+}
+.settings-page .control label::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    border: 2px solid #ddd;
+  
+}
+
+.settings-page .control label::after{
+    position: absolute;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 4px;
+    content: '\2713';
+    color: white;
+    background-color: var(--blue-color);
+    border: 2px solid var(--blue-color);
+    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+    transform: scale(0) rotate(360deg);
+
+}
+
+.settings-page .control label:hover::before{
+border-color: var(--blue-color);
+}
+
+.settings-page .control input[type="checkbox"]:checked +label::after {
+   transform: scale(1);
+}
+
+/* End settings box */
+
+/* Start settings box */
+.settings-page .radio label{
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+}
+.settings-page .radio label::before{
+       content: '';
+       position: absolute;
+       left: 0;
+       top: 0;
+       width: 19px;
+       height: 19px;
+       border: 1px solid #ddd;
+       border-radius: 50%;
+ 
+}
+
+.settings-page .radio label::after{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: 3.5px;
+    top: 3px;
+    /*border: 1px solid var(--blue-color);
+    */background-color: var(--blue-color);
+    border-radius: 50%;
+    transition: .3s;
+    transform: scale(0);
+    
+}
+
+.settings-page .radio input[type="radio"]:checked + label::before{
+border-color: var(--blue-color);
+}
+
+.settings-page .radio input[type="radio"]:checked + label::after{
+     transform:scale(1) ;
+    
+}
+
+/* End settings box */
+
+/* Start settings box */
+.settings-page .server { 
+    width: 100%;
+    margin-right: 20px;
+    position: relative;
+    text-align: center;
+}
+.settings-page .server label{
+    cursor: pointer;
+    
+}
+
+.settings-page .server label::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    
+}
+
+.settings-page .server input[type="radio"]:checked + label::before,
+.settings-page .server input[type="radio"]:checked + label span,
+.settings-page .server input[type="radio"]:checked + label i{
+    border-color: var(--blue-color);
+    color: var(--blue-color);
+}
+
+
+
+@media(max-width:767px){
+ 
+.settings-page {
+    grid-template-columns: minmax(100px, 1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+}
+.settings-page .server {
+    margin-bottom: 45px;
+   
+}
+
+        .settings-page .servers {
+          flex-wrap: wrap;
+        }
+      
+  
+}
+
+/* End settings box */
+
+/* Start profile page */
+
+
+
+
+.profile-page .info1{
+    text-align: center;
+    border-right: 2px solid #eee;
+    padding-right: 30px;
+    width: 300px;
+    margin: auto;
+  
+}
+
+
+.profile-page .info1 img{
+    width: 100px;
+    height: 100px;
+}
+.profile-page .info1 div:nth-of-type(1){
+    width: 100px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 20px;
+    margin: 0 aoto;
+    display: inline-block;
+    margin-bottom: 10px;
+    position: relative;
+}
+.profile-page .info1 div:nth-of-type(1) span{
+position: absolute;
+left: 0;
+width: 50%;
+height: 100%;
+background-color: var(--blue-color);
+border-radius: 20px;
+}
+
+.profile-page .info2 .Information{
+    flex-wrap: wrap;
+    overflow: hidden;
+    
+}
+.profile-page .info2 .Information > div:not(.switch) {
+    min-width: 250px;
+}
+
+.profile-page .info2 .switch {
+    margin: 27px 50px 0  0;
+    transform: translateY(-50%);
+
+}
+
+.profile-page .info2 .switch label input{
+appearance: none;
+}
+.profile-page .info2 .switch-toggle{
+    position: relative;
+    top: 0;
+    width: 100px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 10px;
+    /* left: 25px; */
+    cursor: pointer;
+}
+.profile-page .info2 .switch-toggle::before{
+    content: '\2715';
+    color: var(--grey-color);
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ddd;
+    text-align: center;
+    transition: .5s;
+   
+}
+.profile-page .info2 input[type="checkbox"]:checked + .switch-toggle::before{
+    content: '\2713';
+    background: white;
+    color: var(--blue-alt-color);
+    left: 77px;
+}
+
+.profile-page .info2 input[type="checkbox"]:checked + .switch-toggle{
+    background-color: var(--blue-color);
+}
+.profile-page .info2 .box:hover{
+    background-color: #eee;
+    border-radius: 6px;
+ 
+}
+
+
+@media(max-width:767px){
+
+    .first-box,
+    .first-box .Information{
+        flex-direction: column;
+    }
+
+    .first-box .info1{
+       border: none;
+    }
+
+    .first-box .info2{
+       text-align: center;
+   }
+
+    .first-box .info2 .information div{
+        margin-bottom: 5px;
+     }
+
+     .profile-page .info2 .switch {
+        margin: 10px auto 5px;
+        
+    }
+}
+
+.profile-page .another-data .skills{
+    width: 410px;
+}
+
+.profile-page .activity{
+    align-items: center;
+}
+.profile-page .activity i{
+    font-size: 60px;
+    margin-right: 20px;
+}
+
+
+@media (max-width:767px) {
+    .profile-page .another-data .skills{
+        height: fit-content;
+    }
+
+    .profile-page .another-data{
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+    .profile-page .last-activity p{
+        margin-bottom: 0;  
+     }
+
+    .profile-page .activity i{
+        font-size: 30px; 
+        margin-top: 10px;   
+    }
+
+    .profile-page .activity p{
+       margin: 3px 0 0 0;   
+    }
+    .profile-page .activity,
+    .profile-page .activity .div{
+        display: block;
+        text-align: center;
+      margin-top: 10px;
+        
+    }
+
+    .page{
+        overflow: hidden;
+    }
+}
+
+/* End profile page */
+
+/* Start projects page */
+.project .date{
+    position: absolute;
+    right: 10px;
+}
+
+.project .team{
+position: relative;
+min-height: 80px;
+}
+
+.project .team a{
+position: absolute;
+top: 10px;
+left: 0;
+}
+
+.project .team a:nth-child(2){
+    left: 25px;
+ }
+
+.project .team a:nth-child(3){
+     left: 50px;
+}
+
+.project .team a:nth-child(4){
+     left: 75px;
+}
+
+.project .team a:nth-child(5){
+    left: 100px;
+}
+
+.project .team a img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.project .do{
+    margin: 20px 0;
+justify-content: flex-end;
+margin-top: 10px;
+}
+.project .info .process{
+   position: relative;
+   width: 200px;
+   height: 10px;
+   border-radius: 6px;
+   background-color: #eee;
+}
+
+.project .info .process span{
+    position: absolute;
+    left: 0;
+    height: 10px;
+    border-radius: 6px;
+}
+
+@media (max-width:767px){
+.projects-page{
+    grid-template-columns: minmax(315px,1fr);
+    margin-left: 10px;
+    margin-right: 10px;
+    gap: 10px;
+}
+
+.project .do{
+    flex-direction: column;
+}
+.project .do span{
+    width:fit-content;
+    margin-bottom: 10px;
+}
+
+.project .info{
+    flex-direction: column;
+    gap: 10px;
+}
+
+}
+
+/* End projects page */
+
+/* Start course page */
+.courses-page{
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+}
+.courses-page .course{
+    overflow: hidden;
+
+}
+
+.courses-page .course .cover{
+    width: 100%;  
+}
+.courses-page .course .instractor{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: 10px;
+    top: 10px;
+}
+
+.course .info{
+    height: 45px;
+    margin: 25px 25px 0 10px;
+}
+
+.courses-page .info p{
+    position: absolute;
+    top: -33px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* End course page */
+
+/* Start Friends page */
+
+.friends-page{
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.friends-page .friend .profile i:nth-of-type(1),
+.friends-page .friend .profile i:nth-of-type(2){
+       position: absolute;
+       top: 10px;
+       padding: 5px;
+       background-color: #eee;
+       color: grey;
+       border-radius: 50%;
+       cursor: pointer;
+}    
+
+.friends-page .friend .profile i:nth-of-type(1){
+left: 10px;
+}
+
+.friends-page .friend .profile i:nth-of-type(2){
+left: 40px;   
+}
+.friends-page .friend .profile i:nth-of-type(1):hover,
+.friends-page .friend .profile i:nth-of-type(2):hover{
+    background-color: var(--blue-color);
+    color: white;
+}
+
+.friends-page .friend .profile div{
+    margin-top: 25px;
+}
+.friends-page .friend .profile img{
+    border-radius: 50%;
+    width: 100px;
+}
+
+.friends-page .friend .process .profile-btn,
+.friends-page .friend .process .remove-btn{
+    cursor: pointer;
+    padding: 5px;
+}
+
+.friends-page .friend .process .remove-btn{
+    background-color: var(--red-color);
+}
+
+.friends-page .friend .process .profile-btn:hover,
+.friends-page .friend .process .remove-btn:hover{
+   opacity: .5;
+}
+/* End Friends page */
+
+/* Start file-page */
+.files-page{
+    align-items: flex-start;
+    flex-direction: row-reverse;
+    overflow: hidden;
+}
+
+@media (max-width:767px){
+    .files-page{
+        flex-direction: column;
+        align-items: normal;
+       
+    }
+
+    .files-page .files{
+        grid-template-columns: minmax(100px,1fr);
+        gap: 10px;
+    }
+}
+
+.files-page .static-files{
+    min-width: 260px;
+    /* height: fit-content; */
+}
+.files-page .stat-file{
+    align-items: center;
+    padding-left: 10px;
+}
+.files-page .stat-file .icon{
+    width: 50px;
+    height: 40px;
+    justify-content: center;
+    border-radius: 3px;
+    margin-right: 10px;
+}
+
+.files-page .stat-file .blue{
+    background-color: rgb(0 117 255 / 20%);
+}
+.files-page .stat-file .green{
+    background-color: rgb(34 197 94 / 20%);
+}
+.files-page .stat-file .red{
+    background-color: rgb(244 67 54 / 20%);
+}
+.files-page .stat-file .orange{
+    background-color: rgb(245 158 11 / 20%);
+}
+.files-page .stat-files .upload{
+    width: fit-content;
+    margin: 10px auto;
+    padding: 0 10px;
+}
+
+.files-page .stat-files .upload:hover{
+    background-color: var(--blue-alt-color);
+}
+.files-page .stat-files .upload:hover i{
+    animation: go-up .8s infinite; 
+}
+
+@keyframes go-up{
+    0%,100%{
+        transform:translateY(0);
+
+}
+    50%{
+        transform:translateY(-5px)    ;        
+}
+
+}
+
+.files-page .files{
+    grid-template-columns: repeat(auto-fill,minmax(230px,1fr));
+}
+
+.files-page .files .file{
+    min-height: fit-content;
+    
+}
+.files-page .files .file .download{
+    cursor: pointer;
+}
+.files-page .files .file .download:hover{
+    color: var(--blue-color);
+}
+
+.files-page .files .image img{
+    transition: .3s;
+}
+.files-page .files .image:hover img{
+    transform: rotate(10deg);
+
+}
+.files-page .files img{
+    width: 80px;
+    height: 80px;
+}
+
+.files-page .files .info{
+    height: fit-content;
+ 
+}
+
+/* End file-page */
